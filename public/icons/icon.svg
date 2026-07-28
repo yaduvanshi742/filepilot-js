@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="FilePilot icon">
+  <defs>
+    <linearGradient id="g" x1="20" x2="110" y1="20" y2="110" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38bdf8" />
+      <stop offset="1" stop-color="#6366f1" />
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="30" fill="#0f172a" />
+  <path d="M34 28h38l22 22v50H34z" fill="url(#g)" />
+  <path d="M72 28v24h22" fill="#bfdbfe" opacity="0.75" />
+  <path d="M46 65h36M46 78h28M46 91h20" stroke="#fff" stroke-width="7" stroke-linecap="round" />
+</svg>
