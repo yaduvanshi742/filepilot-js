@@ -1,0 +1,21 @@
+{
+  "name": "filepilot-js",
+  "version": "1.0.0",
+  "description": "A local-first JavaScript file organizer for previewing, tagging, searching, and managing browser-based file collections.",
+  "type": "module",
+  "scripts": {
+    "dev": "npx serve .",
+    "check": "node scripts/check.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "keywords": [
+    "javascript",
+    "indexeddb",
+    "file-manager",
+    "pwa",
+    "local-first",
+    "frontend"
+  ],
+  "author": "Yadhuvanshi",
+  "license": "MIT"
+}
