@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111827" />
+    <meta
+      name="description"
+      content="FilePilot JS is a local-first JavaScript file organizer for previewing, tagging, searching, and managing browser-based file collections."
+    />
+    <title>FilePilot JS</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="public/icons/icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="src/styles/main.css" />
+  </head>
+  <body>
+    <div id="app" class="app-shell">
+      <aside class="sidebar" aria-label="Primary navigation">
+        <a class="brand" href="#dashboard" aria-label="FilePilot home">
+          <span class="brand-mark">FP</span>
+          <span>
+            <strong>FilePilot</strong>
+            <small>Local file workspace</small>
+          </span>
+        </a>
+
+        <nav class="nav-list" id="sidebarNav">
+          <a href="#dashboard" data-route="dashboard" class="nav-link is-active">Dashboard</a>
+          <a href="#files" data-route="files" class="nav-link">Files</a>
+          <a href="#collections" data-route="collections" class="nav-link">Collections</a>
+          <a href="#preview" data-route="preview" class="nav-link">Preview</a>
+          <a href="#backup" data-route="backup" class="nav-link">Backup</a>
+          <a href="#settings" data-route="settings" class="nav-link">Settings</a>
+        </nav>
+
+        <div class="sidebar-card">
+          <p class="eyebrow">Quick import</p>
+          <label class="file-drop-mini" for="globalFileInput">
+            <span>Choose files</span>
+            <small>Images, text, code, JSON and more</small>
+          </label>
+          <input id="globalFileInput" class="sr-only" type="file" multiple />
+        </div>
+      </aside>
+
+      <div class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow" id="pageEyebrow">Workspace</p>
+            <h1 id="pageTitle">Dashboard</h1>
+          </div>
+
+          <div class="topbar-actions">
+            <label class="search-box" for="globalSearch">
+              <span aria-hidden="true">⌕</span>
+              <input id="globalSearch" type="search" placeholder="Search files, tags, notes..." autocomplete="off" />
+            </label>
+            <button id="themeToggle" class="icon-button" type="button" aria-label="Toggle theme">☾</button>
+          </div>
+        </header>
+
+        <main id="viewRoot" class="view-root" tabindex="-1"></main>
+      </div>
+    </div>
+
+    <div id="toastRoot" class="toast-root" aria-live="polite" aria-atomic="true"></div>
+    <div id="modalRoot" class="modal-root" hidden></div>
+
+    <script type="module" src="src/app/main.js"></script>
+  </body>
+</html>
